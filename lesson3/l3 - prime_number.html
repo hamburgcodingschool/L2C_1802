@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        
+//        var number = parseInt(window.prompt("What is the number?"));
+//        
+//        var isPrime = true;
+//        
+//        for (var i = 2; i < number; i++) {
+//            document.write(i);
+//            
+//            if (number % i == 0) {
+//                document.write(" - found a divisor");    
+//                isPrime = false;
+//            } else {
+//                document.write(" no divisor here");    
+//            }
+//            
+//            document.write("<br>");
+//        }
+        
+        var number = parseInt(window.prompt("What is the number?"));
+        
+        var isPrime = true;
+        
+        for (var i = 2; i <= Math.sqrt(number); i++) {            
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        
+        if (isPrime) {
+            document.write(" YAY ITS A PRIME");    
+        } else {
+            document.write(" NOT A PRIME");    
+        }
+            
+        
+    </script>
+</body>
+
+</html>
