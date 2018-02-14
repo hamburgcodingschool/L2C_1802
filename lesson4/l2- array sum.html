@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+<script>
+    
+    var numbers = [5, 7, 3, 12, 10, 9];
+    
+    var sum = 0;
+    var max = numbers[0];
+    var min = numbers[0];
+    
+    for (var i = 0; i < numbers.length; i++) {
+        
+        //sum = sum + numbers[i];
+        sum += numbers[i];
+        
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+        
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+    
+    document.write(sum);
+    document.write("<br>");
+    
+    var avg = sum / numbers.length;
+    
+    document.write(avg);
+    document.write("<br>");
+    
+    document.write(max);
+    document.write("<br>");
+    
+    document.write(min);
+    document.write("<br>");
+    
+    
+    
+    var fibo = [0, 1];
+    
+    
+    
+</script>
+        
+	</body>
+</html>
