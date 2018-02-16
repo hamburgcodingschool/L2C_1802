@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+
+<script>
+    
+//    function randomize(min, max) {
+//        
+//        var num = Math.random(); 
+//        
+//        num *= max + 1 - min;
+//        
+//        num += min;
+//        
+//        num = Math.floor(num);
+//        
+//        return num;
+//    }
+    
+    function randomize(min, max) {
+        
+        return Math.floor(Math.random() * (max + 1 - min)) + min;
+        
+    }
+    
+    // INITIALIZE ARRAY
+    var counters = [];
+    for (var i = 0; i < 10; i++) {
+        counters[i] = 0;
+    }
+    
+    // CALCULATE HOW MANY TIMES EACH NUMBER BETWEEN 0 AND 9 APPEARS
+    for (var i = 0; i < 10000; i++) {
+        var number = randomize(0, 9);
+        counters[number]++;
+    }
+    
+    // PRINT THE RESULT
+    for (var i = 0; i < counters.length; i++) {
+        document.write(i + ": " + counters[i]);
+        document.write("<br>");
+    }
+    
+    
+</script>
+</body>
+
+</html>

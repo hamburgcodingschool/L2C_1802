@@ -12,7 +12,7 @@
 <script>
     
     function isPrime(number) {
-            
+        
         for (var i = 2; i <= Math.sqrt(number); i++) {            
             if (number % i == 0) {
                 return false;
@@ -21,10 +21,10 @@
         return true;
     }
     
+    // PRINT ALL THE NUMBERS BETWEEN 1 AND 100 THAT ARE PRIME
     
     for (var i = 1; i <= 100; i++) {
-        // PRINT IT IF ITS A PRIME
-        
+        // PRINT IT IF ITS A PRIME    
         if (isPrime(i)) {
             document.write(i);
             document.write("<br>");    

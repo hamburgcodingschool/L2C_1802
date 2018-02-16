@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<script>
+    
+    function isPrime(number) {
+        
+        for (var i = 2; i <= Math.sqrt(number); i++) {            
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    // FIND 100 PRIME NUMBERS AND PUT THEM IN AN ARRAY
+
+    var counter = 0;
+    var num = 1;
+    var primes = []; // var primes = new Array();
+    
+    while (counter < 100) {
+        
+        if (isPrime(num)) {
+            primes[counter] = num;
+            counter++; 
+        }
+        num++;
+    }   
+    
+    // PRINT THE ARRAY
+    
+    for (var i = 0; i < primes.length; i++) {
+        document.write((i + 1) + ": " + primes[i]);
+        document.write("<br>");        
+    }
+    
+    
+</script>
+</body>
+
+</html>

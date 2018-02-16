@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+
+<script>
+    function randomize(min, max) {
+        return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+    
+    // GENERATE 6 NUMBERS BETWEEN 1 AND 49 AND PUT THEM IN AN ARRAY
+    // NO REPEATED NUMBERS
+    
+    // 1st step
+    // create a function that takes an array and a number and returns
+    // true / false if the number exists in the array
+    
+    function exists(array, number) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == number) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    var someNumbers = [43, 12, 45, 3, 10, 23];
+    var oneNumber = 50;
+    
+    if (exists(someNumbers, oneNumber)) {
+        alert("YAY");
+    } else {
+        alert("NOPE");
+    }
+    
+</script>
+</body>
+
+</html>

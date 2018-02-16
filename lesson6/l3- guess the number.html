@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<script>
+    function randomize(min, max) {
+        return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+    
+    // GUESS THE NUMBER
+    // ASK THE USER FOR A NUMBER UNTIL HE/SHE GUESSES THE GENERATED NUMBER
+    // THE GAME LETS THE USER KNOW IF THE NUMBER IS HIGHER OR LOWER 
+    
+    var generatedNumber = randomize(1, 100);
+    var triesLeft = 6;
+    
+    var userNumber = parseInt(window.prompt("Guess the number..."));
+    var youWin = true;
+    
+    while (userNumber != generatedNumber) {
+        
+        triesLeft--;
+        if (triesLeft == 0) {
+            youWin = false;
+            break;
+        }
+        
+        if (userNumber < generatedNumber) {
+            alert("Your number is too low! You have " + triesLeft + " tries left.");
+        }
+        if (userNumber > generatedNumber) {
+            alert("Your number is too high! You have " + triesLeft + " tries left.");
+        }
+        
+        userNumber = parseInt(window.prompt("Guess the number..."));
+    }
+    
+    if (youWin) {
+        document.write("<h1>YAY YOU WON!!!!!!</h1>");    
+    } else {
+        document.write("<h1>BOO! YOU SUCK!!!!!!</h1>");    
+    }
+    
+    
+    
+    
+    
+</script>
+    
+</body>
+
+</html>
