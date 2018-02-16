@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+<script>
+    
+    var num = parseInt(window.prompt("Give me a number..."));
+    
+    var fibo = [0, 1];
+    
+//  calculate the array
+    
+    for (var i = 2; i < num; i++) {
+        
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+        
+    }     
+    
+    
+//  writing the fibonacci array to the page
+    for (var i = 0; i < fibo.length; i++) {
+        document.write((i + 1) + ": " + fibo[i]);
+        document.write("<br>");
+    }
+    
+</script>
+        
+	</body>
+</html>

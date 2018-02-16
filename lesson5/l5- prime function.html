@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<script>
+    
+    function isPrime(number) {
+            
+        for (var i = 2; i <= Math.sqrt(number); i++) {            
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    
+    for (var i = 1; i <= 100; i++) {
+        // PRINT IT IF ITS A PRIME
+        
+        if (isPrime(i)) {
+            document.write(i);
+            document.write("<br>");    
+        }
+    }
+    
+</script>
+</body>
+
+</html>

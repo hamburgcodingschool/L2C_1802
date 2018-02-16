@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<script>
+    function biggest(num1, num2, num3) {
+        
+        if (num1 > num2) {
+            if (num1 > num3) {
+                return num1;
+            } else {
+                return num3;
+            }
+        } else {
+            if (num2 > num3) {
+                return num2;
+            } else {
+                return num3;
+            }
+        }
+    }
+
+    var userInput1 = parseInt(window.prompt("Number?"));
+    var userInput2 = parseInt(window.prompt("Another number?"));
+    var userInput3 = parseInt(window.prompt("One more!"));
+    
+    var big = biggest(userInput1, userInput2, userInput3);
+    document.write(big);
+
+    
+    
+    
+    
+</script>
+</body>
+
+</html>
