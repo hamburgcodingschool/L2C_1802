@@ -11,17 +11,13 @@
 <body>
 
 <script>
+    // HELPER FUNCTIONS
+    
     function randomize(min, max) {
         return Math.floor(Math.random() * (max + 1 - min)) + min;
     }
     
-    // GENERATE 6 NUMBERS BETWEEN 1 AND 49 AND PUT THEM IN AN ARRAY
-    // NO REPEATED NUMBERS
-    
-    // 1st step
-    // create a function that takes an array and a number and returns
-    // true / false if the number exists in the array
-    
+    // RETURNS true/false IF THE NUMBER EXISTS IN ARRAY
     function exists(array, number) {
         for (var i = 0; i < array.length; i++) {
             if (array[i] == number) {
@@ -31,13 +27,54 @@
         return false;
     }
     
-    var someNumbers = [43, 12, 45, 3, 10, 23];
-    var oneNumber = 50;
+    function compare(a, b) {
+        return a - b;
+    }
     
-    if (exists(someNumbers, oneNumber)) {
-        alert("YAY");
-    } else {
-        alert("NOPE");
+//    Function exists() USAGE EXAMPLE:
+//    
+//    var someNumbers = [43, 12, 45, 3, 10, 23];
+//    var oneNumber = 50;
+//    
+//    if (exists(someNumbers, oneNumber)) {
+//        alert("YAY");
+//    } else {
+//        alert("NOPE");
+//    }
+    
+    
+    // GENERATE 6 NUMBERS BETWEEN 1 AND 49 AND PUT THEM IN AN ARRAY
+    // NO REPEATED NUMBERS
+    
+    // 1st step
+    // create a function that takes an array and a number and returns
+    // true / false if the number exists in the array
+    
+
+    var numbersArray = [];
+    for (var i = 0; i < 6; i++) {
+        var generatedNumber = randomize(1, 49);
+        
+        while (exists(numbersArray, generatedNumber)) {
+            generatedNumber = randomize(1, 49);
+        }
+        
+        numbersArray[i] = generatedNumber;    
+    }
+    
+    // SORT BY USING THE HELPER FUNCTION COMPARE
+    numbersArray.sort( compare );
+
+//    COULD ALSO DO IT INLINE...
+//    numbersArray.sort(function(a, b) {
+//        return a - b;
+//    });
+    
+    
+    // PRINT THE RESULT
+    for (var i = 0; i < numbersArray.length; i++) {
+        document.write(i + ": " + numbersArray[i]);
+        document.write("<br>");
     }
     
 </script>

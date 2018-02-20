@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html>
+	<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        
+        var input = "banana";
+        var hyphenatedString = "";        
+        
+        for (var i = 0; i < input.length; i++) {
+            if (i > 0) {
+                hyphenatedString += "-";    
+            }
+            hyphenatedString += input[i];
+        }
+        
+        document.write(hyphenatedString);
+        
+        
+    </script>
+</body>
+</html>

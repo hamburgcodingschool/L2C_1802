@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+	<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        
+//        function reverseString(input) {
+//            var reversedString = "";
+//
+//            for (var i = 0; i < input.length; i++) {
+//                var mirrorChar = input.length -1 -i;
+//
+//                reversedString += input[mirrorChar];    
+//            }
+//            return reversedString;
+//        }
+        
+        function reverseString(input) {
+            var reversedString = "";
+
+            for (var i = input.length - 1; i >= 0; i--) {
+                reversedString += input[i];    
+            }
+            return reversedString;
+        } 
+        
+        var input = "POKEMON";        
+        document.write(reverseString(input));
+        
+        // ANOTHER WAY TO CHECK FOR A PALINDROME
+        if (input == reverseString(input)) {
+            // Palindrome
+        } else {
+            // NOT   
+        }
+        
+        
+    </script>
+</body>
+</html>
